@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+/* ------初期設定------ */
+body {
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  word-break: break-all;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #1ca9e3
+}
+
+li {
+  list-style: none;
+}
+
+
+/* ------header------ */
+.nav_all {
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 3px 3px 0 rgb(0 0 0 / 20%);
+  /*左右px 上下px ぼかしpx 広がりpx*/
+  /* display: none;  確認用 */
+}
+
+.nav_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_item {
+  padding: 0 24px;
+  font-size: 18px;
+}
+
+.nav_link {
+  display: inline-block;
+  color: #333;
+  padding: 20px 0;  /*上下のpadding(margin)はインライン要素につけるとほかの要素被って崩れからだめ！*/
+}
+
+.nav_link:hover {
+  color: #75a9ff
+}
+
+
+/* ------main------ */
+/* ---top--- */
+.top {
+  display: flex;  /* .topがフレックスコンテナに、中身はフレックスアイテムになった*/
+  align-items: center;  /* フレックスアイテムをコンテナの高さの中央に */
+  justify-content: center;  /* フレックスアイテムをコンテナの幅の中央に */
+  text-align: center; /* ブロック要素に効果有。.topはコンテナなのでブロック要素 */
+  height: 700px;
+  background-color: #000;
+}
+
+.top_title {
+  font-size: 60px;
+  font-weight: bold;
+  color: #888;
+  letter-spacing: 5px;
+}
+
+.top_subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #888;
+  letter-spacing: 5px;
+}
+
+/* .section */
+.section {
+  padding: 120px 0;
+}
+
+.section:nth-of-type(odd) {   /* 同じ種類の子要素の数（childは全ての子要素） */
+  background-color: #f7f7f7;
+}
+
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;  /* margin:0autoの内側にちょっとある */
+}
+
+.font1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #555;
+  margin-bottom: 60px;
+}
+
+.font2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.font3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.font4 {
+  width: 60%;
+  margin: 0 auto; /* なんでこれだけtext-alignだめ？ */
+  /* →widthを指定するとwidthの中でテキストが中央に配置されるから！ */
+}
+
+/* ---ABOUT--- */
+.about_img {
+  display: block; /* imgはインライン要素だからー！ */
+  width: 40%;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 50px 0 #d9d9d9;
+}
+
+/* ---SKILL--- */
+.skill_item {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.skill_img {
+  margin-right: 20px;
+  
+}
+
+.skill_img img {
+  width: 60px;
+}
+
+/* ---WORKS--- */
+.work_all {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.work_item {
+  flex: 32%;
+  margin-right: 2%;
+}
+
+.work_item:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.work_item a img {
+  width: 100%;  /* これないと小さくならないなぜ？？？？？ */
+}
+
+.work_body p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 6px;
+}
+
+/*  ---contact--- */
+.contact_list {
+  display: flex;  /* フレックスアイテムはどれ？ul？孫要素は入らないよね？ */
+  align-items: center; /* 縦 */
+  justify-content: center;  /* 横　効果あるからフレックスアイテム？ */
+}
+
+.contact_list li {
+  list-style: none;
+  text-align: center; /* 勝手に付けました */
+}
+
+.contact_img {
+  width: 60px;
+}
+
+.contact_mail {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* bottom */
+.bottom {
+  background-color: #333;
+}
+
+.bottom .inner {
+  padding: 30px;
+}
+
+.copyright {
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+}
